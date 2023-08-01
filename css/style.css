@@ -172,6 +172,7 @@ img {
 /* section 2 */
 .section-two-list {
   justify-content: space-between;
+  gap: 24px;
 }
 /* .section-two-list li {
   margin-right: 24px;
@@ -185,7 +186,18 @@ img {
 .section-two-list-item {
   width: calc((100% - 72px) / 4);
 }
-
+.list-title.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -318,6 +330,7 @@ img {
 .filter-button:focus {
   color: #fff;
   background-color: #404bbf;
+  border: 1px solid transparent;
 }
 .portfolio-list-title {
   color: #2e2f42;
