@@ -8,22 +8,48 @@ body {
   background-color: var(--brand-background-color);
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
 ul,
 ol {
   text-decoration: none;
   color: var(--brand-color);
+  margin: 0;
+  padding-left: 0;
 }
 
-h3 {
+img {
+  display: block;
+}
+
+.list-subtitle {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
   color: #2e2f42;
 }
-
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 /* header */
 .header {
+  border-bottom: 1px solid #e7e9fc;
+  background: #fff;
+}
+.container.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link {
+  padding: 24px 0;
 }
 .header-logo {
   font-family: 'Raleway', sans-serif;
@@ -33,6 +59,7 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  padding-right: 76px;
 }
 .header-logo-studio {
   color: #2e2f42;
@@ -41,8 +68,10 @@ h3 {
   text-decoration: none;
 }
 .list {
+  display: flex;
   list-style: none;
   color: #2e2f42;
+  align-items: center;
 }
 .list-item {
   font-size: 16px;
@@ -60,6 +89,12 @@ h3 {
 .address {
   font-style: normal;
 }
+.address .adderess-list {
+  padding-right: 40px;
+}
+.address .adderess-list-child {
+  padding-right: 0;
+}
 .address-link {
   color: #434455;
   font-size: 16px;
@@ -70,12 +105,25 @@ h3 {
 .address-link:focus {
   color: #404bbf;
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .list-item {
+  padding-right: 40px;
+}
+.navigation .list-item:last-child {
+  padding-right: 0;
+}
 
 /* main */
 /* section1 */
 .section {
+}
+.section.section-one {
   background-color: #2e2f42;
 }
+
 .section-title {
   color: #ffffff;
   text-align: center;
@@ -83,6 +131,15 @@ h3 {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 1.12px;
+  padding-top: 188px;
+  padding-bottom: 48px;
+  max-width: 496px;
+  margin: 0 auto;
+}
+.section-one-buttom {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 188px;
 }
 .section-button {
   font-family: 'Roboto', sans-serif;
@@ -93,12 +150,41 @@ h3 {
   line-height: 1.5;
   letter-spacing: 0.64px;
   cursor: pointer;
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .section-button:hover,
 .section-button:focus {
   background-color: #404bbf;
 }
 /* section 2 */
+.section-two-list {
+  justify-content: space-between;
+}
+.section-two-list li {
+  padding-right: 24px;
+}
+.section-two-list li:last-child {
+  padding-right: 0;
+}
+.section-two {
+  padding-top: 120px;
+}
+.list-title.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .list-title {
   color: #2e2f42;
   text-align: center;
@@ -107,6 +193,7 @@ h3 {
   line-height: 1.11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  padding-bottom: 72px;
 }
 .list-text {
   color: var(--slate, #434455);
@@ -114,16 +201,45 @@ h3 {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+/* section three */
+.section-three-list > li {
+  padding-right: 24px;
+}
+.section-three-list > li:last-child {
+  padding-right: 0;
+}
+.section-three {
+  padding-top: 120px;
+}
+.section-three-list {
+  padding-bottom: 120px;
+}
 /* section 4 */
 .section-team {
   background: #f4f4fd;
+  padding-top: 120px;
 }
 .team-list-item {
   background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
+  background: var(--white, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.section-team-list {
+  padding-bottom: 120px;
+}
+.section-team-list > li {
+  margin-right: 24px;
+}
+.section-team-list > li:last-child {
+  margin-right: 0;
 }
 /* footer */
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
 }
 .footer-text {
   color: #f4f4fd;
@@ -132,6 +248,8 @@ h3 {
   font-weight: 400;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
+  padding-bottom: 100px;
+  max-width: 264px;
 }
 /* .header-logo >  */
 .footer-logo-studio {
