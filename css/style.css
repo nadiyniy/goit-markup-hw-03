@@ -370,4 +370,8 @@ img {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   background: #fff;
+  border-top: none;
+}
+.filter-block-list-item {
+  width: calc((100% - 48px) / 3);
 }
